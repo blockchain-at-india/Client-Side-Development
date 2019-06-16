@@ -36,6 +36,7 @@ h1 {
   width: 100%;
   background: var(--white);
   top: 0;
+  z-index: 9999;
   box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
   /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); */
 }
@@ -60,7 +61,7 @@ h1 {
   padding: 1rem;
   font-weight: 400;
   position: fixed;
-  top: 8%;
+  top: 10%;
   width: 100%;
   color: var(--dark-blue);
   background-color: white;
@@ -76,10 +77,10 @@ h1 {
 
 @keyframes dropIn {
   from {
-    top: -100%
+    opacity: 0;
   }
   to {
-    top: 8%
+    opacity: 1;
   }
 }
 
@@ -296,10 +297,12 @@ h1 {
 }
 
 .cards {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  text-align: center;
+  /* margin-left: 6rem;
+  margin-right: 6rem; */
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* flex-wrap: wrap;
+  text-align: center; */
 }
 
 .card {
@@ -314,6 +317,7 @@ h1 {
   background: white;
   color: var(--dark-blue);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateX(20%);
 }
 
 .chapter-profile-img {
@@ -692,10 +696,19 @@ footer>p {
     margin-bottom: 2rem;
     padding: 1rem 3rem;
   }
+  .cards {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.blogs {
-  justify-content: space-evenly;
-}
+  .card {
+    transform: translateX(16%);
+  }
+
+  .blogs {
+    justify-content: space-evenly;
+  }
   .blog>p {
     padding: 0.2rem;
     margin: 0.2rem;
