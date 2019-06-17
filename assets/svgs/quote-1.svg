@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121.036" height="118" viewBox="0 0 121.036 118">
-  <defs>
-    <filter id="quote" x="0" y="0" width="121.036" height="118" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#quote)">
-    <path id="quote-2" data-name="quote" d="M103.036,100V54.454L72.672,0H55.263l23.28,54.454H59.109V100Zm-58.3,0V54.454L14.575,0H0L21.255,54.454H0V100Z" transform="translate(9 6)" fill="#fff" opacity="0.5"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="122" height="118" viewBox="0 0 121.036 118"><defs><filter id="A" x="0" y="0" width="121.036" height="118" filterUnits="userSpaceOnUse"><feOffset dy="3"/><feGaussianBlur stdDeviation="3" result="A"/><feFlood flood-opacity=".16"/><feComposite operator="in" in2="A"/><feComposite in="SourceGraphic"/></filter></defs><g filter="url(#A)"><path d="M103.036 100V54.454L72.672 0h-17.41l23.28 54.454H59.11V100zm-58.3 0V54.454L14.575 0H0l21.255 54.454H0V100z" transform="translate(9 6)" fill="#fff" opacity=".5"/></g></svg>

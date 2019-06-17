@@ -1,9 +1,11 @@
-$(document).ready(() => {
-  $('.toggle-button').click(() => {
-    $('.navlinks').toggleClass('show')
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.toggle-button')
+  const navLinks = document.querySelector('.navlinks')
+  toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('show')
   })
 
-  new Siema({
+  const cards = new Siema({
     selector: '.cards',
     duration: 200,
     easing: 'ease-out',
@@ -21,7 +23,7 @@ $(document).ready(() => {
     onChange: () => {}
   })
 
-  new Siema({
+  const profileCards = new Siema({
     selector: '.profile-cards',
     duration: 200,
     easing: 'ease-out',
@@ -39,7 +41,7 @@ $(document).ready(() => {
     onChange: () => {}
   })
 
-  var test = new Siema({
+  const test = new Siema({
     selector: '.test',
     duration: 200,
     easing: 'ease-out',
@@ -53,12 +55,13 @@ $(document).ready(() => {
     onInit: () => {},
     onChange: () => {}
   })
-
-  $('.left-arrow').click(() => {
-    test.prev()
-  })
-
-  $('.right-arrow').click(() => {
-    test.next()
-  })
 })
+
+//   $('.left-arrow').click(() => {
+//     test.prev()
+//   })
+
+//   $('.right-arrow').click(() => {
+//     test.next()
+//   })
+// })
