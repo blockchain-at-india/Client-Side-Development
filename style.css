@@ -1,7 +1,16 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap";
+@font-face {
+  font-family: SegoePrint;
+  src: url(./assets/fonts/segoepr.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+.segoe {
+  font-family: SegoePrint;
 }
 
 .login-button-pc {
@@ -12,6 +21,14 @@
   flex: 2;
   padding-top: .1rem;
   transform: scale(0.8) translateX(-8%);
+}
+
+.left-arrow {
+  z-index: 999;
+}
+
+.right-arrow {
+  z-index: 999;
 }
 
 .navbar {
@@ -125,14 +142,12 @@ h1 {
 }
 
 .blogs {
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, .9);
-  background-image: url(./assets/images/Image-6.jpg);
-  background-size: cover;
+  background: var(--yellow);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  width: 100%;
 }
 
 .blogs>button {
@@ -147,14 +162,31 @@ h1 {
 }
 
 .blogs>h1 {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  color: var(--yellow);
+  color: var(--white);
   padding: 2rem;
   text-align: center;
 }
 
 .by {
   color: var(--yellow);
+}
+
+body>main>div.team>img:nth-child(2) {
+  height: 3rem;
+  left: 1%;
+  pointer-events: all;
+  position: absolute;
+  top: 40%;
+  width: 3rem;
+}
+
+body>main>div.team>img:nth-child(3) {
+  height: 3rem;
+  pointer-events: all;
+  position: absolute;
+  right: 1%;
+  top: 40%;
+  width: 3rem;
 }
 
 .card {
@@ -169,7 +201,7 @@ h1 {
   justify-content: space-between;
   margin: 1rem;
   max-width: 268px;
-  transform: translateX(32%);
+  transform: translateX(21%);
 }
 
 .chapter-img {
@@ -307,6 +339,7 @@ h1 {
 .mission>p {
   color: var(--white);
   text-align: center;
+  width: 90%;
 }
 
 .navlinks, li {
@@ -372,7 +405,7 @@ h1 {
   max-width: 268px;
   padding: .8rem;
   text-align: center;
-  transform: translateX(17%);
+  transform: translateX(11%);
 }
 
 .profile-card>img {
@@ -398,6 +431,11 @@ h1 {
   flex-direction: column;
   padding: 1rem;
   position: relative;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, .9);
+  background-image: url(./assets/images/Image-6.jpg);
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .team-button {
@@ -411,7 +449,7 @@ h1 {
 }
 
 .team>h1 {
-  color: #fff;
+  color: var(--yellow);
   margin: 0;
   padding: 2rem;
   text-align: center;
@@ -436,10 +474,27 @@ h1 {
 
 .testimonials-h1 {
   color: var(--yellow);
+  margin: 0;
 }
 
 .testimonials-p {
   color: #fff;
+}
+
+.by {
+  font-size: 24px;
+}
+
+.quote {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2rem;
+  width: 2rem;
+}
+
+.profile-card-yellow {
+  color: var(--yellow);
 }
 
 .top-chapters {
@@ -702,34 +757,41 @@ footer>p {
     font-size: 16px;
   }
   body>main>div.team>img:nth-child(2) {
-    height: 9rem;
+    height: 10rem;
     left: 1%;
     pointer-events: all;
     position: absolute;
     top: 40%;
-    width: 9rem;
+    width: 10rem;
   }
   body>main>div.team>img:nth-child(3) {
-    height: 9rem;
+    height: 10rem;
     pointer-events: all;
     position: absolute;
     right: 1%;
     top: 40%;
-    width: 9rem;
+    width: 10rem;
   }
   body>main>div.testimonials>img:nth-child(1) {
-    height: 9rem;
+    height: 10rem;
     left: 1%;
     pointer-events: all;
     top: 40%;
-    width: 9rem;
+    width: 10rem;
   }
   body>main>div.testimonials>img:nth-child(2) {
-    height: 9rem;
+    height: 10rem;
     right: 1%;
     top: 40%;
-    width: 9rem;
+    width: 10rem;
   }
+
+.quote {
+  margin-left: auto;
+  margin-right: auto;
+  height: 8rem;
+  width: 8rem;
+}
   button {
     align-items: center;
     border: 5px solid transparent;
