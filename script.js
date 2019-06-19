@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   rightArrow[2].addEventListener('click', blogsRight, false)
 
   teamMembers = [...teamMembers]
-  console.log(teamMembers)
+  // console.log(teamMembers)
 
   document.addEventListener('DOMContentLoaded', () => {})
 
