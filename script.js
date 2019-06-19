@@ -1,16 +1,16 @@
-let cards, profileCards, test
+let topChapters, testimonials, ourTeam, blogs
 
 document.addEventListener('DOMContentLoaded', () => {
   const leftArrow = document.querySelectorAll('.left-arrow')
   const rightArrow = document.querySelectorAll('.right-arrow')
   const toggleButton = document.querySelector('.toggle-button')
   const navLinks = document.querySelector('.navlinks')
+  let teamMembers = document.querySelectorAll('div[data-member-bio]')
   toggleButton.addEventListener('click', () => {
     navLinks.classList.toggle('show')
   })
 
-
-  cards = new Siema({
+  topChapters = new Siema({
     selector: '.cards',
     duration: 200,
     easing: 'ease-out',
@@ -28,7 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
     onChange: () => {}
   })
 
-  test = new Siema({
+  ourTeam = new Siema({
+    selector: '.all-team',
+    duration: 200,
+    easing: 'ease-out',
+    perPage: {
+      0: 1,
+      1190: 3
+    },
+    startIndex: 0,
+    draggable: true,
+    multipleDrag: true,
+    threshold: 20,
+    loop: true,
+    rtl: false,
+    onInit: () => {},
+    onChange: () => {}
+  })
+
+  testimonials = new Siema({
     selector: '.test',
     duration: 200,
     easing: 'ease-out',
@@ -42,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
     onInit: () => {},
     onChange: () => {}
   })
-  profileCards = new Siema({
-    selector: '.profile-cards',
+  blogs = new Siema({
+    selector: '.blog-cards',
     duration: 200,
     easing: 'ease-out',
     perPage: {
@@ -61,17 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   function testLeft() {
-    test.prev()
+    testimonials.prev()
   }
   function testRight() {
-    test.next()
+    testimonials.next()
   }
 
   function profileLeft() {
-    profileCards.prev()
+    ourTeam.prev()
   }
   function profileRight() {
-    profileCards.next()
+    ourTeam.next()
+  }
+
+  function blogsLeft() {
+    blogs.prev()
+  }
+  function blogsRight() {
+    blogs.next()
   }
 
   leftArrow[0].addEventListener('click', testLeft, false)
@@ -79,16 +104,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   leftArrow[1].addEventListener('click', profileLeft, false)
   rightArrow[1].addEventListener('click', profileRight, false)
+
+  leftArrow[2].addEventListener('click', blogsLeft, false)
+  rightArrow[2].addEventListener('click', blogsRight, false)
+
+  teamMembers = [...teamMembers]
+  console.log(teamMembers)
+
+  document.addEventListener('DOMContentLoaded', () => {})
+
+  teamMembers.map((member) => {
+    member.addEventListener('click', () => {
+      let title = member.getAttribute('data-name').replace('-', ' ')
+      title = title.charAt(0).toUpperCase() + title.slice(1)
+
+      new Swal({
+        title: title,
+        html: `<h3 style="font-family: 'Roboto'"> ${member.getAttribute('data-member-bio')}</h3>`,
+        confirmButtonColor: '#FDCA3E',
+        customClass: {
+          fadeInUp: 'animated fadeInUp'
+        },
+
+        animation: false
+      })
+    })
+  })
 })
-
-
-
-
-//   $('.left-arrow').click(() => {
-//     test.prev()
-//   })
-
-//   $('.right-arrow').click(() => {
-//     test.next()
-//   })
-// })
