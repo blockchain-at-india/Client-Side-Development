@@ -24,25 +24,6 @@
   transform: scale(.6) translateX(-20%);
 }
 
-.left-arrow {
-  z-index: 999;
-  display: block;
-  height: 3rem;
-  position: absolute;
-  left: 1%;
-  top: 50%;
-  width: 3rem
-}
-
-.right-arrow {
-  z-index: 999;
-  display: block;
-  height: 3rem;
-  position: absolute;
-  right: 1%;
-  top: 50%;
-  width: 3rem
-}
 
 .navbar {
   align-items: center;
@@ -285,7 +266,7 @@ h1 {
 }
 
 .blogs>h1 {
-  color: var(--yellow);
+  color: white;
   padding: 2rem;
   text-align: center
 }
@@ -303,6 +284,7 @@ h1 {
   flex-direction: column;
   flex-shrink: 0;
   justify-content: space-between;
+  background-image: linear-gradient(to bottom #fff 0%, #f3e7e9 100%);
   border-radius: 10px;
   margin: 1rem;
   height: 20rem;
@@ -313,7 +295,6 @@ h1 {
   transition: all .2s linear;
   background-image: none;
 }
-
 .card:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -351,7 +332,6 @@ h1 {
 }
 
 .chapter-profile-text {
-  background: var(--white);
   display: block;
   text-align: center;
   margin-bottom: auto;
@@ -359,7 +339,6 @@ h1 {
 
 .chapter-text {
     align-items: center;
-    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     color: #fff;
     display: flex;
     flex: 1;
@@ -450,22 +429,20 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  border-radius: 0 20% 0 20%;
   padding: 5rem;
 }
 
 .mission>button {
   background-color: white;
-  border: 1px solid var(--yellow);
+  border: 3px solid var(--yellow);
   border-radius: 50px;
-  box-shadow: 0 5px 7px rgba(0, 0, 0, .55);
-  color: var(--dark-blue);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto;
   padding: 1rem 2rem
 }
 
 .mission>h1 {
-  color: var(--yellow)
+  color: var(--yellow);
 }
 
 .mission>p {
@@ -493,7 +470,7 @@ h1 {
 }
 
 .partner-text {
-  color: var(--black);
+  color: var(--dark-blue);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -508,7 +485,6 @@ h1 {
   border-radius: 50px;
   color: var(--white);
   margin: 3.5rem auto;
-  padding: 1rem
 }
 
 .partner-text>h1 {
@@ -523,26 +499,43 @@ h1 {
 
 .blog-card {
   align-items: stretch;
-  background-color: #fff;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   border: 1px solid grey;
   flex-direction: column;
   flex-shrink: 0;
-  justify-content: space-between;
-  margin: 1rem;
+  justify-content: space-around;
+  padding-top: 3rem;
   max-width: 268px;
-  padding: .8rem;
+  min-height: 300px;
+  width: auto;
+  height: auto;
   text-align: center;
-  transform: translateX(17%)
+  transform: translateX(17%);
+  border-radius: 10%;
+  position: relative;
+  overflow: hidden;
 }
 
 .blog-card>img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: block;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  text-align: center
+  text-align: center;
+  opacity: 0.5;
+  z-index: -999;
+  filter: brightness(50%);
 }
 
+.blog-text {
+  z-index: 999;
+  color: black;
+}
 .blog-cards {
   width: 100%;
 }
@@ -555,6 +548,7 @@ h1 {
   position: relative;
   min-height: 100vh;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .team-button {
@@ -562,7 +556,7 @@ h1 {
   border-radius: 50px;
   color: var(--dark-blue);
   margin: 2.3rem auto;
-  padding: 1rem 2rem
+  padding: 1rem 2rem;
 }
 
 .team>h1 {
@@ -610,12 +604,16 @@ h1 {
   width: 2rem
 }
 
-.blog-card-yellow {
-  color: var(--yellow)
+.blog-card-white {
+  color: var(--dark-blue);
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 .top-chapters {
   color: var(--dark-blue);
+  position: relative;
 }
 
 .top-chapters>button {
@@ -654,9 +652,11 @@ body>main>div.testimonials>img:nth-child(2) {
 
 footer {
   align-items: center;
+  color: var(--dark-blue);
   display: flex;
   justify-content: space-between;
-  padding: 1rem
+  padding: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 footer>div>img {
@@ -906,14 +906,6 @@ footer>p {
   :root {
     font-size: 13px;
   }
-  body>main>div.team>img:nth-child(2) {
-    top: 40%;
-    left: 1%;
-  }
-  body>main>div.team>img:nth-child(3) {
-    right: 1%;
-    top: 40%;
-  }
   body>main>div.testimonials>img:nth-child(1) {
     height: 10rem;
     left: 1%;
@@ -957,36 +949,29 @@ footer>p {
     height: 16rem;
     width: 16rem
   }
-  .left-arrow {
-    z-index: 999;
-    display: block;
-    height: 9rem;
-    position: absolute;
-    left: 1%;
-    top: 50%;
-    width: 9rem
-  }
-  .right-arrow {
-    z-index: 999;
-    display: block;
-    height: 9rem;
-    position: absolute;
-    right: 1%;
-    top: 50%;
-    width: 9rem;
-  }
   .face-info {
     padding-top: 0.5rem;
     position: absolute;
     height: 3rem;
     width: 3rem;
   }
-  .blogs>.left-arrow, .blogs>.right-arrow {
-    top: 45%;
+
+  .blue-arrow, .white-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
   }
-  .team>.left-arrow, .team>.right-arrow {
-    top: 10%
+
+  .arrow-left{
+    transform: rotate(180deg);
+    left: 3%;
   }
+
+  .arrow-right{
+    right: 3%;
+  }
+
+
 }
 
 .fadeInUp {
@@ -1006,7 +991,3 @@ footer>p {
   }
 }
 
-
-.swal2-modal {
-  font-family: SegoePrint !important;
-}

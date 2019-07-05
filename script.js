@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     easing: 'ease-out',
     perPage: {
       0: 1,
-      1190: 4
+      1190: 3
     },
     startIndex: 0,
     draggable: true,
@@ -118,16 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
       let title = member.getAttribute('data-name').replace('-', ' ')
       title = title.charAt(0).toUpperCase() + title.slice(1)
 
-      new Swal({
-        title: title,
-        html: `<h3 style="font-family: 'Roboto'"> ${member.getAttribute('data-member-bio')}</h3>`,
-        confirmButtonColor: '#FDCA3E',
-        customClass: {
-          fadeInUp: 'animated fadeInUp'
-        },
-
-        animation: false
-      })
     })
   })
 })
