@@ -46,20 +46,20 @@ document.addEventListener('DOMContentLoaded', () => {
     onChange: () => {}
   })
 
-  testimonials = new Siema({
-    selector: '.test',
-    duration: 200,
-    easing: 'ease-out',
-    perPage: 1,
-    startIndex: 0,
-    draggable: true,
-    multipleDrag: true,
-    threshold: 20,
-    loop: true,
-    rtl: false,
-    onInit: () => {},
-    onChange: () => {}
-  })
+  // testimonials = new Siema({
+  //   selector: '.test',
+  //   duration: 200,
+  //   easing: 'ease-out',
+  //   perPage: 1,
+  //   startIndex: 0,
+  //   draggable: true,
+  //   multipleDrag: true,
+  //   threshold: 20,
+  //   loop: true,
+  //   rtl: false,
+  //   onInit: () => {},
+  //   onChange: () => {}
+  // })
   blogs = new Siema({
     selector: '.blog-cards',
     duration: 200,
@@ -78,12 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
     onChange: () => {}
   })
 
-  function testLeft() {
-    testimonials.prev()
-  }
-  function testRight() {
-    testimonials.next()
-  }
+  // function testLeft() {
+  //   testimonials.prev()
+  // }
+  // function testRight() {
+  //   testimonials.next()
+  // }
 
   function profileLeft() {
     ourTeam.prev()
@@ -99,8 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
     blogs.next()
   }
 
-  leftArrow[0].addEventListener('click', testLeft, false)
-  rightArrow[0].addEventListener('click', testRight, false)
+  // leftArrow[0].addEventListener('click', testLeft, false)
+  // rightArrow[0].addEventListener('click', testRight, false)
 
   leftArrow[1].addEventListener('click', profileLeft, false)
   rightArrow[1].addEventListener('click', profileRight, false)
