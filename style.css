@@ -264,7 +264,7 @@ h1 {
 .blogs {
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, .9);
-  background-image: url(assets/images/Image-6.jpg);
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -311,15 +311,16 @@ h1 {
   overflow:visible;
   margin-top: 2rem;
   transition: all .2s linear;
+  background-image: none;
 }
 
 .card:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .card:hover .chapter-profile-img {
   transform: scale(1.11);
-  border-radius: 30%;
+  border-radius: 5%;
 }
 
 
@@ -358,7 +359,7 @@ h1 {
 
 .chapter-text {
     align-items: center;
-    background: var(--dark-blue);
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     color: #fff;
     display: flex;
     flex: 1;
@@ -403,7 +404,7 @@ h1 {
 }
 
 .contribute-text {
-  background-color: var(--dark-blue);
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -445,11 +446,7 @@ h1 {
 
 .mission {
   align-items: center;
-  background-blend-mode: multiply;
-  background-color: rgba(37, 33, 32, .8);
-  background-image: url(assets/images/Image-4.jpg);
-  background-position-x: 50%;
-  background-size: cover;
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -725,7 +722,7 @@ footer>p {
   }
 
   .chapter-text {
-    background: var(--dark-blue);
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     color: #fff;
     display: flex;
     flex: 1;
@@ -766,7 +763,7 @@ footer>p {
   }
   .login-button-pc {
     align-items: center;
-    background-color: var(--blue);
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     border-bottom: 0px;
     border-radius: 3rem;
     border-top: 0px;
