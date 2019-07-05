@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     easing: 'ease-out',
     perPage: {
       0: 1,
-      1190: 3
+      1190: 4
     },
     startIndex: 0,
     draggable: true,

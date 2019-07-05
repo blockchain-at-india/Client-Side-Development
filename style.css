@@ -99,6 +99,7 @@
 body {
   /* font-family: Montserrat; */
   font-family: Roboto, sans;
+  background: color: #f3f7f7;
 }
 
 button {
@@ -295,7 +296,6 @@ h1 {
 
 .card {
   align-items: stretch;
-  background: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   color: var(--dark-blue);
   display: flex;
@@ -706,7 +706,9 @@ footer>p {
 
   .blogs {
     justify-content: space-evenly;
+  background-image: linear-gradient(to bottom, var(--blue) 0%,40%,var(--dark-blue) 100%);
     border: 1rem solid white;
+    border-radius: 20% 0% 20% 0;
   }
 
   .card {
