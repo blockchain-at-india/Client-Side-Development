@@ -788,6 +788,10 @@ footer>p {
   .contribute-text>button {
     margin: 3.5rem auto 2rem auto;
   }
+  .navlinks li {
+    font-family: 'Roboto';
+    font-weight: 400;
+  }
   .hero {
     background-repeat: no-repeat;
     background-size: 100vw auto;
@@ -796,7 +800,7 @@ footer>p {
   }
   .login-button-pc {
     align-items: center;
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     border-bottom: 0px;
     border-radius: 3rem;
     border-top: 0px;
@@ -812,7 +816,11 @@ footer>p {
 
   .login-button-pc * {
     margin-left: 2rem;
+    text-decoration: none; 
+    color: white;
+
   }
+  
   .login-button-pc>img {
     height: 1.2rem;
     width:1.2rem; 
@@ -975,7 +983,7 @@ footer>p {
     font-size: 1.2rem;
     justify-content: space-between;
     margin: 0;
-    padding: 1.3rem 2rem
+    padding: .8rem 1rem
   }
   p {
     font-size: 1.2rem;
