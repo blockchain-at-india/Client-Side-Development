@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // [0] == Top chapters, [1] == Our Team
   const leftArrows = document.querySelectorAll('.arrow-left')
   const rightArrows = document.querySelectorAll('.arrow-right')
-  console.log(leftArrows, rightArrows)
   // Responosive Navbar
   const toggleButton = document.querySelector('.toggle-button')
   const navLinks = document.querySelector('.navlinks')
