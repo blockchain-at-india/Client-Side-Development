@@ -310,13 +310,11 @@ p {
   border-radius: 10px;
   margin: 1rem;
   height: 17.2rem;
-  max-width: 250px;
   position: relative;
   overflow:visible;
   margin-top: 2rem;
   transition: all .2s linear;
   background-image: none;
-  transform: translateX(15%);
 }
 .card:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -424,7 +422,7 @@ p {
   font-weight: 600;
   margin-left: auto;
   margin-right: auto;
-  padding: 1rem 2rem
+  padding: 0.8rem 1rem
 }
 
 .contribute-text>h1 {
@@ -476,14 +474,17 @@ p {
 
 .navlinks, li {
   letter-spacing: .1rem;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .navlinks>li {
   list-style: none;
   text-align: center;
   text-decoration: none;
-  width: 100%
+}
+.navlinks> li a{
+  text-decoration: none;
+  color: var(--dark-blue);
 }
 
 .partner-img {
@@ -707,7 +708,7 @@ footer>p {
   h1 {
     font-size: 3.5rem;
     font-family: Montserrat;
-    padding: 3rem;
+    padding: 3rem 0 0 2rem;
   }
   .become {
     display: flex;
@@ -760,7 +761,7 @@ footer>p {
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
     text-align: center;
     border: 1rem solid white;
   }
@@ -786,7 +787,7 @@ footer>p {
     border: 1rem solid white;
   }
   .contribute-text>button {
-    margin: 3.5rem auto;
+    margin: 3.5rem auto 2rem auto;
   }
   .hero {
     background-repeat: no-repeat;
@@ -820,7 +821,10 @@ footer>p {
   .mission {
     border: 1rem solid white;
     border-radius: 0 20% 0 20%;
-    padding: 5rem;
+    padding: 2rem;
+  }
+  .mission p {
+    width: 60%;
   }
   .nav-logo {
     flex: 0;
@@ -864,7 +868,7 @@ footer>p {
     text-decoration: none;
     transition: .1s all
   }
-  .navlinks>li:hover {
+  .navlinks>li a:hover {
     color: var(--yellow)
   }
   /* //continue here */
@@ -997,20 +1001,4 @@ footer>p {
   }
 }
 
-.fadeInUp {
-  animation-duration: 1s;
-  animation-name: fadeInUp;
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    -moz-transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0)
-  }
-}
 
