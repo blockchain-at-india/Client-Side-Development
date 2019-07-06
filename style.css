@@ -57,8 +57,7 @@
   background-color: #fff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
   color: var(--dark-blue);
-  display: block;
-  display: none;
+  display: none; 
   font-weight: 400;
   line-height: 2rem;
   padding: 1rem;
@@ -69,11 +68,10 @@
 .show {
   opacity: 1;
   display: block;
-  transition: 0.5s all ease-in-out;
+  transition: .5s all ease-in-out;
 }
 
 .toggle-button {
-  color: var(--dark-blue);
   display: inline-block;
   font-size: 2rem;
   font-weight: 700;
@@ -436,12 +434,11 @@ p {
 }
 
 .login-button {
-  background: var(--dark-blue);
-  border: 1px solid var(--dark-blue);
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
   border-radius: 50%;
   margin-right: 1rem;
   padding: .2rem;
-  transform: translate(.1);
+  transform: translateY(12%);
 }
 
 .mission {
@@ -474,6 +471,8 @@ p {
 
 .navlinks, li {
   letter-spacing: .1rem;
+  font-family: 'Montserrat';
+  font-weight: 600;
   text-transform: uppercase;
 }
 
