@@ -18,6 +18,23 @@
   display: none
 }
 
+.blue-arrow, .white-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 9999;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.arrow-left{
+  transform: rotate(180deg);
+  left: 3%;
+}
+
+.arrow-right{
+  right: 3%;
+}
+
 .nav-logo {
   flex: 2;
   padding-top: .1rem;
@@ -80,19 +97,28 @@
 body {
   /* font-family: Montserrat; */
   font-family: Roboto, sans;
-  background: color: #f3f7f7;
 }
 
 button {
-  margin: 2rem;
-  font-family: Montserrat;
-  font-weight: 600;
+    font-family: 'Montserrat';
+    align-items: center;
+    border: 5px solid transparent;
+    border-bottom: 0px;
+    border-radius: 50px;
+    border-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: 1rem;
 }
 
 h1 {
   margin: 1rem
 }
 
+p {
+    font-size: 0.8rem;
+}
 @keyframes dropIn {
   from {
     opacity: 0
@@ -127,8 +153,9 @@ h1 {
 }
 .landing-text h1 {
   color: var(--blue);
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
+  font-size: 2rem;
 }
 
 .landing-text p {
@@ -143,8 +170,8 @@ h1 {
 }
 
 .landing-buttons button {
-  margin:  1rem 0rem;
-  padding: 0rem 1rem;
+  margin:  12px 5px 0 0;
+  padding: 1rem 0.75rem;
   border-radius: 39%;
   border-top:   none;
   border-bottom:   none;
@@ -153,6 +180,8 @@ h1 {
   border-bottom: 1px;
   border-radius: 50px;
   border-top: 1px;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .all-blogs {
@@ -183,26 +212,10 @@ h1 {
 }
 
 .all-team {
-  transform: translateX(2%);
-}
-.team-member {
-  align-items: stretch;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
-  color: var(--dark-blue);
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  flex-shrink: 0;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 10px;
-  margin: 1rem;
-  height: 20rem;
-  max-width: 250px;
-  position: relative;
-  overflow:visible;
-  margin-top: 2rem;
-}
+    width: 80%;
+    margin: 0 auto;
+  }
+
 
 .team-member p {
   font-size: 12px;
@@ -274,9 +287,20 @@ h1 {
 .by {
   color: var(--yellow)
 }
+.cards {
+    width: 50vh;
+    overflow: visible;
+    margin: 0 auto;
+}
+
+.all-team {
+    width: 80%;
+    overflow: visible;
+    margin: 0 auto;
+}
 
 .card {
-  align-items: stretch;
+  align-items: center;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   color: var(--dark-blue);
   display: flex;
@@ -287,13 +311,14 @@ h1 {
   background-image: linear-gradient(to bottom #fff 0%, #f3e7e9 100%);
   border-radius: 10px;
   margin: 1rem;
-  height: 20rem;
+  height: 17.2rem;
   max-width: 250px;
   position: relative;
   overflow:visible;
   margin-top: 2rem;
   transition: all .2s linear;
   background-image: none;
+  transform: translateX(15%);
 }
 .card:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -338,6 +363,7 @@ h1 {
 }
 
 .chapter-text {
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     align-items: center;
     color: #fff;
     display: flex;
@@ -351,8 +377,9 @@ h1 {
 .chapter-text>button {
   background: var(--white);
   color: var(--dark-blue);
-  margin: 3.5rem auto;
+  margin: 1.4rem 0;
   padding: .8rem 1rem;
+  font-weight: 600;
 }
 
 .chapters {
@@ -375,11 +402,9 @@ h1 {
 
 .contribute-img {
   /* background-image: url(assets/images/Image-3.jpg); */
-  height: 100%;
-  flex:1;
+  height: 12rem;
   background-repeat: no-repeat;
-  height: 16rem;
-  margin: auto 0;
+  margin: 1rem 0;
 }
 
 .contribute-text {
@@ -397,8 +422,8 @@ h1 {
   background-color: var(--white);
   border: 1px solid var(--white);
   border-radius: 50px;
-  box-shadow: 0 5px 7px rgba(0, 0, 0, .55);
   color: var(--dark-blue);
+  font-weight: 600;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem 2rem
@@ -429,8 +454,8 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  border-radius: 0 20% 0 20%;
-  padding: 5rem;
+  border-radius: 0 0% 0 0%;
+  padding: 1rem;
 }
 
 .mission>button {
@@ -467,6 +492,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   height: 12rem;
+  margin-top: 2rem;
 }
 
 .partner-text {
@@ -484,7 +510,9 @@ h1 {
   background-color: var(--dark-blue);
   border-radius: 50px;
   color: var(--white);
-  margin: 3.5rem auto;
+  margin: 1.6rem auto;
+  font-family: 'Montserrat';
+  font-weight: 600;
 }
 
 .partner-text>h1 {
@@ -534,7 +562,14 @@ h1 {
 
 .blog-text {
   z-index: 999;
-  color: black;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.blog-text:nth-child(3)::first-letter{
+  font-size: 3rem;
+  font-family: serif;
 }
 .blog-cards {
   width: 100%;
@@ -542,13 +577,11 @@ h1 {
 
 .team {
   display: flex;
-  border: 1rem solid white;
   flex-direction: column;
-  padding: 2rem;
   position: relative;
-  min-height: 100vh;
   justify-content: space-evenly;
   position: relative;
+  margin-bottom: 4rem;
 }
 
 .team-button {
@@ -672,6 +705,7 @@ footer>p {
 /* @media (min-width:1190px) { */
 
 @media (min-width:948px) {
+
   h1 {
     font-size: 3.5rem;
     font-family: Montserrat;
@@ -706,25 +740,23 @@ footer>p {
 
   .blogs {
     justify-content: space-evenly;
-  background-image: linear-gradient(to bottom, var(--blue) 0%,40%,var(--dark-blue) 100%);
+    background-image: linear-gradient(to bottom, var(--blue) 0%,40%,var(--dark-blue) 100%);
     border: 1rem solid white;
     border-radius: 20% 0% 20% 0;
   }
 
   .card {
-    transform: translateX(17%);
     margin-top: 4rem;
+    height: 20rem;
   }
 
   .cards {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-  transform: translateX(1%);
+    width: 80%;
+    overflow: visible;
+    margin: 0 auto;
   }
 
   .chapter-text {
-    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     color: #fff;
     display: flex;
     flex: 1;
@@ -741,6 +773,7 @@ footer>p {
   .chapter-img {
     flex: 1;
     height: 26rem;
+
   }
   .contribute {
     flex-direction: row
@@ -788,6 +821,8 @@ footer>p {
   }
   .mission {
     border: 1rem solid white;
+    border-radius: 0 20% 0 20%;
+    padding: 5rem;
   }
   .nav-logo {
     flex: 0;
@@ -859,6 +894,7 @@ footer>p {
     color: var(--blue);
     margin: 0;
     padding: 0;
+    font-size: 45.5px;
   }
 
   .landing-buttons {
@@ -869,6 +905,8 @@ footer>p {
   .landing-buttons button {
     margin: 2.5rem 1rem 0.25rem 0;
     background: var(--yellow);
+    font-size: 1.2rem;
+    font-weight: 600;
     padding: 1rem;
   }
 
@@ -955,23 +993,9 @@ footer>p {
     height: 3rem;
     width: 3rem;
   }
-
-  .blue-arrow, .white-arrow {
-    position: absolute;
-    top: 50%;
-    z-index: 999;
+  .team {
+    border: 0;
   }
-
-  .arrow-left{
-    transform: rotate(180deg);
-    left: 3%;
-  }
-
-  .arrow-right{
-    right: 3%;
-  }
-
-
 }
 
 .fadeInUp {

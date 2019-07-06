@@ -1,22 +1,26 @@
-let topChapters, testimonials, ourTeam, blogs
+let topChapters, ourTeam, blogs
 
 document.addEventListener('DOMContentLoaded', () => {
-  const leftArrow = document.querySelectorAll('.left-arrow')
-  const rightArrow = document.querySelectorAll('.right-arrow')
+  // [0] == Top chapters, [1] == Our Team
+  const leftArrows = document.querySelectorAll('.arrow-left')
+  const rightArrows = document.querySelectorAll('.arrow-right')
+  console.log(leftArrows, rightArrows)
+  // Responosive Navbar
   const toggleButton = document.querySelector('.toggle-button')
   const navLinks = document.querySelector('.navlinks')
-  let teamMembers = document.querySelectorAll('div[data-member-bio]')
   toggleButton.addEventListener('click', () => {
     navLinks.classList.toggle('show')
   })
 
+  // Top chapters
   topChapters = new Siema({
     selector: '.cards',
-    duration: 200,
+    duration: 400,
     easing: 'ease-out',
     perPage: {
       0: 1,
-      1190: 3
+      948: 3,
+      1500: 5
     },
     startIndex: 0,
     draggable: true,
@@ -28,13 +32,15 @@ document.addEventListener('DOMContentLoaded', () => {
     onChange: () => {}
   })
 
+  // Our Team
   ourTeam = new Siema({
     selector: '.all-team',
-    duration: 200,
+    duration: 400,
     easing: 'ease-out',
     perPage: {
       0: 1,
-      1190: 3
+      948: 3,
+      1500: 5
     },
     startIndex: 0,
     draggable: true,
@@ -46,11 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     onChange: () => {}
   })
 
-  // testimonials = new Siema({
-  //   selector: '.test',
-  //   duration: 200,
+  // blogs = new Siema({
+  //   selector: '.blog-cards',
+  //   duration: 400,
   //   easing: 'ease-out',
-  //   perPage: 1,
+  //   perPage: {
+  //     1: 1,
+  //     1190: 3
+  //   },
   //   startIndex: 0,
   //   draggable: true,
   //   multipleDrag: true,
@@ -60,64 +69,26 @@ document.addEventListener('DOMContentLoaded', () => {
   //   onInit: () => {},
   //   onChange: () => {}
   // })
-  blogs = new Siema({
-    selector: '.blog-cards',
-    duration: 200,
-    easing: 'ease-out',
-    perPage: {
-      1: 1,
-      1190: 3
-    },
-    startIndex: 0,
-    draggable: true,
-    multipleDrag: true,
-    threshold: 20,
-    loop: true,
-    rtl: false,
-    onInit: () => {},
-    onChange: () => {}
-  })
 
-  // function testLeft() {
-  //   testimonials.prev()
-  // }
-  // function testRight() {
-  //   testimonials.next()
-  // }
-
-  function profileLeft() {
-    ourTeam.prev()
-  }
-  function profileRight() {
-    ourTeam.next()
+  function left(section) {
+    section.prev()
   }
 
-  function blogsLeft() {
-    blogs.prev()
-  }
-  function blogsRight() {
-    blogs.next()
+  function right(section) {
+    section.next()
   }
 
-  // leftArrow[0].addEventListener('click', testLeft, false)
-  // rightArrow[0].addEventListener('click', testRight, false)
+  // leftArrows[0].addEventListener('click', () => left(topChapters), false)
+  // leftArrows[1].addEventListener('click', () => left(blogs), false)
+  // leftArrows[2].addEventListener('click', () => left(ourTeam), false)
 
-  leftArrow[1].addEventListener('click', profileLeft, false)
-  rightArrow[1].addEventListener('click', profileRight, false)
+  leftArrows[0].addEventListener('click', () => left(topChapters), false)
+  leftArrows[1].addEventListener('click', () => left(ourTeam), false)
 
-  leftArrow[2].addEventListener('click', blogsLeft, false)
-  rightArrow[2].addEventListener('click', blogsRight, false)
+  // rightArrows[0].addEventListener('click', () => right(topChapters), false)
+  // rightArrows[1].addEventListener('click', () => right(blogs), false)
+  // rightArrows[2].addEventListener('click', () => right(ourTeam), false)
 
-  teamMembers = [...teamMembers]
-  // console.log(teamMembers)
-
-  document.addEventListener('DOMContentLoaded', () => {})
-
-  teamMembers.map((member) => {
-    member.addEventListener('click', () => {
-      let title = member.getAttribute('data-name').replace('-', ' ')
-      title = title.charAt(0).toUpperCase() + title.slice(1)
-
-    })
-  })
+  rightArrows[0].addEventListener('click', () => right(topChapters), false)
+  rightArrows[1].addEventListener('click', () => right(ourTeam), false)
 })
