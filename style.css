@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap);
-/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
 /* @font-face {
   font-family: SegoePrint;
   src: url(assets/fonts/segoepr.ttf)
@@ -9,10 +10,6 @@
   box-sizing: border-box;
   margin: 0;
 }
-
-/* .segoe {
-  font-family: SegoePrint
-} */
 
 .login-button-pc {
   display: none
@@ -246,7 +243,7 @@ p {
   width: 2rem;
   z-index: 1500;
   border-radius: 50%;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
   font-family: SegoePrint;
   right: 10%;
@@ -564,7 +561,7 @@ p {
   z-index: 999;
   color: white;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .blog-text:nth-child(3)::first-letter{
@@ -640,7 +637,7 @@ p {
 .blog-card-white {
   color: var(--dark-blue);
   font-family: Montserrat;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 3rem;
 }
 
