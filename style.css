@@ -830,10 +830,14 @@ footer>p {
   .mission {
     border: 1rem solid white;
     border-radius: 0 20% 0 20%;
-    padding: 2rem;
+    padding: 4rem;
+  }
+  .mission>h1 {
+    padding: 1rem;
   }
   .mission p {
     width: 60%;
+    padding: 1rem;
   }
   .nav-logo {
     flex: 0;
@@ -1006,6 +1010,7 @@ footer>p {
     width: 3rem;
   }
   .team {
+    margin-top: 1rem;
     border: 0;
   }
 }
