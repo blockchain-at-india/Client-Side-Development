@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Blockchain at India</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -13,7 +14,7 @@
 
 <body>
 
-  <div class="navbar">
+  <div class="navbar" data-aos="fade-down">
     <div class="nav-logo">
       <img src="./assets/images/blockchain-logo.png" class="n-logo" alt="logo" />
     </div>
@@ -46,15 +47,16 @@
   </div>
   <main>
     <div class="hero">
-      <section class="landing"> <img src="assets/svgs/hero.svg" alt="landing hero" />
-        <div class="landing-text">
+      <section class="landing"> <img data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300"
+          data-aos-offset="0" src="assets/svgs/hero.svg" alt="landing hero" />
+        <div class="landing-text" data-aos="fade-left">
           <h1>Blockchain at India</h1>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam illo fuga architecto debitis! Non quisquam
             saepe
             deserunt quia reiciendis, eaque quibusdam praesentium sed cum, incidunt corporis, qui architecto quos
             excepturi!
           </p>
-
+    
           <div class="landing-buttons"> <button>
               <a href="/become-an-ambassador" style="color: inherit; text-decoration: none">
                 Become an Ambassador</a></button>
@@ -68,7 +70,7 @@
                         <button>Become A lead</button><button>Become A Mentor</button>
                           </div> -->
     <div class="chapters" id="chapters">
-      <div class="chapter-text">
+      <div class="chapter-text" data-aos="fade-right">
         <h1>Chapters</h1>
         <p class="percent90">
           With its institute chapter program, Blockchain At India is providing unique opportunities to students for
@@ -82,9 +84,9 @@
       </div>
       <img class="chapter-img" src="assets/svgs/chapters.svg" alt="" srcset="">
     </div>
-    <div class="partners" id="partners">
+    <div class="partners" id="partners" >
       <img class="partner-img" src="assets/svgs/partners.svg" alt="" srcset="">
-      <div class="partner-text">
+      <div class="partner-text" data-aos="fade-left">
         <h1>Partners</h1>
         <p class="percent90">
           Our parent organisation ZUBI brings some of the leading blockchain companies, projects, internships and
@@ -99,7 +101,7 @@
       </div>
     </div>
     <div class="contribute" id="contribute">
-      <div class="contribute-text">
+      <div class="contribute-text" data-aos="fade-right">
         <h1>Contribute to Community</h1>
         <p class="percent90">
           With the growth of this community, we would like to have more no of enthusiast community members to provide
@@ -112,7 +114,7 @@
       </div>
       <img class="contribute-img" src="assets/svgs/contribute.svg" alt="" srcset="">
     </div>
-    <div class="mission" id="mission">
+    <div class="mission" id="mission" data-aos="fade-up">
       <h1>Our Mission</h1>
       <p>
         We at Zubi.io are at a mission to create India's largest student-driven community for emerging technologies. We
@@ -135,7 +137,7 @@
       <h1>Our Chapters</h1>
       <img class="blue-arrow arrow-left" src="assets/svgs/blue-arrow.png" />
       <img class="blue-arrow arrow-right" src="assets/svgs/blue-arrow.png" />
-      <div class="cards">
+      <div class="cards" data-aos="zoom-in">
         <div class="card">
           <img src="assets/chapters/pranavmaheshwari-iitbhubaneswar.jpg" alt="" class="chapter-profile-img">
           <div class="chapter-profile-text">
@@ -143,7 +145,7 @@
             IIT, Bhubaneswar
           </div>
         </div>
-        <div class="card">
+        <div class="card" >
           <img src="assets/chapters/tripteshviswas-iitkanpur.jpg" alt="" class="chapter-profile-img">
           <div class="chapter-profile-text">
             <h2>Triptesh Viswas</h2>
@@ -213,12 +215,12 @@
           <button class="team-button">See all</button>
         </div>
       </div> -->
-    <div class="team" >
+    <div class="team" data-aos="zoom-in" >
       <span id="team"></span>
       <img class="blue-arrow arrow-left" src="assets/svgs/blue-arrow.png" />
       <img class="blue-arrow arrow-right" src="assets/svgs/blue-arrow.png" />
       <h1>Our Team</h1>
-      <div class="all-team">
+      <div class="all-team" data-aos-delay="200">
         <div class="card">
           <img src="assets/team/amansanduja-advisor.jpg" alt="" class="chapter-profile-img">
           <div class="chapter-profile-text">
@@ -295,10 +297,15 @@
     <p class="terms">Copyright 2019</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"
     integrity="sha256-o/z6kPkEdOiAuBTgTdUaFN/F+srDaF3EbsJbkeAboXk=" crossorigin="anonymous"></script>
   <script src="./script.js"></script>
-
-</body>
-
-</html>
+  <script>
+    AOS.init()
+  </script>
+  
+  
+  </body>
+  
+  </html>
