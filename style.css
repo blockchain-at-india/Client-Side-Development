@@ -688,8 +688,8 @@ footer {
   align-items: center;
   color: var(--dark-blue);
   display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+  justify-content: center;
+  padding: 2rem;
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 
@@ -766,6 +766,10 @@ footer>p {
     padding: 1rem 1rem;
     text-align: center;
     border: 1rem solid white;
+    padding: 3rem;
+  }
+  .chapter-text h1 {
+    padding: 0;
   }
   .chapters {
     flex-direction: row;
@@ -871,7 +875,8 @@ footer>p {
   }
   .navlinks, li {
     letter-spacing: normal;
-    text-transform: capitalize
+    text-transform: capitalize;
+    font-size: 14px;
   }
   .navlinks>li {
     list-style: none;
