@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('show')
   })
 
+  let logo = document.querySelector('.n-logo')
+  console.log(logo)
+  logo.addEventListener('click', () => {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+  })
+
   // Top chapters
   topChapters = new Siema({
     selector: '.cards',
