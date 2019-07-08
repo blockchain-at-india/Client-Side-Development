@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('show')
   })
 
+  navLinks.addEventListener('click', () => {
+    navLinks.classList.remove('show')
+  })
+
   let logo = document.querySelector('.n-logo')
   console.log(logo)
   logo.addEventListener('click', () => {
